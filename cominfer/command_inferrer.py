@@ -1,5 +1,5 @@
-from command_finder import CommandFinder
-from command_runner import CommandRunner
+from .command_finder import CommandFinder
+from .command_runner import CommandRunner
 
 
 class CommandInferrer:
