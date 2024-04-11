@@ -3,9 +3,10 @@ from command_runner import CommandRunner
 
 
 class CommandInferrer:
-    def __init__(self, description):
+    def __init__(self, description, directory):
         self.description = description
+        self.directory = directory
 
     def infer(self):
-        commands = CommandFinder().find_commands()
+        commands = CommandFinder(self.directory).find_commands()
         CommandRunner(self.description, commands).run()

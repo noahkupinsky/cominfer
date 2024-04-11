@@ -4,8 +4,8 @@ import importlib.util
 
 
 class CommandFinder:
-    def __init__(self):
-        self.dir = os.path.dirname(os.path.realpath(__file__))
+    def __init__(self, directory):
+        self.dir = directory
 
     def find_commands(self):
         return [
