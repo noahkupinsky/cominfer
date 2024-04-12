@@ -35,7 +35,7 @@ class PackageCreator:
         if os.path.exists(self.path):
             raise FileExistsError('Path already exists.')
         os.makedirs(self.path)
-        self._create_file('setup.py', PackageCreator._get_setup_content(self.name))
+        self._create_file(os.path.join(self.path, 'setup.py'), PackageCreator._get_setup_content(self.name))
         self._create_file(os.path.join(self.path, 'README.md'), f'# {self.name}\n\nYour Description Here.')
 
     def _create_package_contents(self):
