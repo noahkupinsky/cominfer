@@ -59,10 +59,12 @@ class PackageCreator:
                     os.path.join(self.path, '.gitignore'))
 
     def _make_initial_commit(self):
+        os.chdir(self.path)
         subprocess.run(['git', 'add', '.'])
         subprocess.run(['git', 'commit', '-m', 'Initial commit'])
 
     def _install_package_locally(self):
+        os.chdir(self.path)
         subprocess.run(['pip', 'install', '-e', self.path])
 
     @staticmethod
