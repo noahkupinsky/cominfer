@@ -1,21 +1,19 @@
+
 from setuptools import setup, find_packages
 
 setup(
-    name='cominfer',
+    name='dickandballs',
     version='0.1',
     packages=find_packages(),
-    install_requires=[
-        'argparse',
-        'importlib-metadata; python_version<"3.8"',
-    ],
+    install_requires=['cominfer'],
     entry_points={
         'console_scripts': [
-            'cominfer=cominfer.package_command:main'
+            'dickandballs=dickandballs.command:main',
         ],
     },
-    author='Noah Kupinsky',
-    author_email='noah@kupinsky.com',
-    description='A tool for synchronizing note files to GitHub repositories.',
+    author='Your name here',
+    author_email='Your email here',
+    description='Your description here.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
 )
