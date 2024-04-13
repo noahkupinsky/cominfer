@@ -69,8 +69,7 @@ class PackageCreator:
 
     @staticmethod
     def _get_setup_content(name):
-        return f"""
-from setuptools import setup, find_packages
+        return f"""from setuptools import setup, find_packages
 
 setup(
     name='{name}',
@@ -92,8 +91,7 @@ setup(
 
     @staticmethod
     def _get_command_content():
-        return """
-import os
+        return """import os
 from cominfer.command_inferrer import CommandInferrer
 
 def main():
@@ -104,7 +102,6 @@ def main():
 
     @staticmethod
     def _get_example_content():
-        return """
-def example():
+        return """def example():
     print('Hello, world!')
 """
